@@ -202,11 +202,11 @@ const FLOW = {
   goal_no2: { stage: 1, say: ["Okay, no problem.", "Can I send you the details on WhatsApp, in case you change your mind?"],
     opts: [{ k: "yes", hint: "Sure", to: "end_details" }, { k: "no", hint: "No need", to: "exit_polite" }, { k: "maybe", hint: "Fine", to: "end_details" }] },
 
-  pitch1: { stage: 2, say: ["Okay, let me tell you about the course.", "It is a 3-month live course, taught by Prateek Mishra.", "He is a senior Gen-AI developer in an MNC, with 8 years of experience. Okay so far?"], tip: "Start with their own words: their job, their goal, and the problem they told you about.",
+  pitch1: { stage: 2, say: ["Okay, let me tell you about the course.", "It is a 3-month live course, and Prateek Mishra teaches it.", "He is a senior Gen-AI developer in an MNC, with 8 years of experience. Okay so far?"], tip: "Start with their own words: their job, their goal, and the problem they told you about.",
     opts: [{ k: "yes", hint: "Following", to: "pitch2" }, { k: "no", hint: "“Never heard of him”", to: "trust_brand" }, { k: "maybe", hint: "Listening", to: "pitch2" }] },
   trust_brand: { stage: 2, say: ["Yes, we are not a big brand.", "But he has taught more than 12,000 engineers, and his LinkedIn is public. I will send it to you. Shall I go on?"],
     opts: [{ k: "yes", hint: "Go on", to: "pitch2" }, { k: "no", hint: "Not convinced", to: "exit_polite" }, { k: "maybe", hint: "Okay", to: "pitch2" }] },
-  pitch2: { stage: 2, say: ["You learn the main Gen-AI tools: LangChain, RAG, AI agents and AWS.", "You build five real apps and put them live. These help your resume get shortlisted.", "Sounds interesting?"], tip: "If they want an example: one app answers questions from RBI circulars. Pause. Do not rush.",
+  pitch2: { stage: 2, say: ["You learn the main Gen-AI tools, like LangChain, RAG, AI agents and AWS.", "Also, you build five real apps and put them live, and these really help your resume get shortlisted.", "Sounds interesting, right?"], tip: "If they want an example: one app answers questions from RBI circulars. Pause. Do not rush.",
     opts: [{ k: "yes", hint: "Interested", to: "pitch3" }, { k: "no", hint: "Not useful for them", to: "pitch_no" }, { k: "maybe", hint: "No reaction", to: "pitch3" }] },
   pitch3: { stage: 2, say: ["The best part: five one-on-one mock interviews, with written feedback.", "You also get a personal mentor for doubts, and a Demo Day with hiring companies.", "Is this what you were looking for?"],
     opts: [{ k: "yes", hint: "Yes", to: "time" }, { k: "no", hint: "Not convinced", to: "pitch_no" }, { k: "maybe", hint: "“What is different?”", to: "diff" }] },
